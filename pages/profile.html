@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../main.css" />
+		<title>Ваш - профил</title>
+	</head>
+	<body>
+		<a style="text-decoration: underline" href="/index.html">< Назад</a>
+		<h1>Ваш профил:</h1>
+		<div class="info"></div>
+		<button class="exit">выйти</button>
+
+		<script>
+			const login = JSON.parse(localStorage.getItem('user')) || ''
+			if (!login) {
+				window.location = '/pages/login.html'
+			}
+			const user = JSON.parse(localStorage.getItem('user'))
+			const wrapper = document.querySelector('.info')
+
+			wrapper.innerHTML = `
+			<h1>Имя: ${user?.firstname}</h1>
+			<h1>Фамиля: ${user?.lastname}</h1>
+			<h1>Номер телефона: ${user?.phone_number}</h1>
+			`
+			const exit = document.querySelector('.exit')
+			exit.addEventListener('click', e => {
+				localStorage.removeItem('user')
+				window.location = '/pages/login.html'
+			})
+		</script>
+	</body>
+</html>
