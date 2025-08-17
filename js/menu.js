@@ -1,11 +1,13 @@
+import data from '../products.js'
 const wrapper = document.querySelector('.menu')
-const api = 'http://127.0.0.1:5500/menu.json'
+// const api = 'http://127.0.0.1:5500/menu.json'
 const cards = JSON.parse(localStorage.getItem('cards')) || []
 const login = JSON.parse(localStorage.getItem('user')) || ''
 
-async function fetchMenu() {
-	const res = await fetch(api)
-	const data = await res.json()
+// async function fetchMenu() {
+function fetchMenu() {
+	// const res = await fetch(api)
+	// const data = await res.json()
 	data?.menu?.map(item => {
 		const div = document.createElement('div')
 		div.classList.add('food')

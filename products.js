@@ -1,0 +1,12 @@
+const menu = {
+	menu: [
+		{ id: 1, img: '/images/hamburger.svg' },
+		{ id: 2, img: '/images/hot-dog.svg' },
+		{ id: 3, img: '/images/taco.svg' },
+		{ id: 4, img: '/images/ice-cream.svg' },
+		{ id: 5, img: '/images/breakfast.svg' },
+		{ id: 6, img: '/images/tea.svg' },
+	],
+}
+
+export default menu

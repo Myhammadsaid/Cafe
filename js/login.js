@@ -24,4 +24,5 @@ form.addEventListener('submit', event => {
 	}
 	localStorage.setItem('user', JSON.stringify(user))
 	clearform()
+	window.location = '/pages/profile.html'
 })

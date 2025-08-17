@@ -1,12 +1,12 @@
+import data from './tables.js'
 const login = JSON.parse(localStorage.getItem('user')) || ''
-const modul = document.querySelector('.modul')
-const overflow = document.querySelector('.overflow')
 const wrapper = document.querySelector('.intro__tables')
-const api = 'http://127.0.0.1:5500/tables.json'
+// const api = 'http://127.0.0.1:5500/tables.json'
 
+// async function fetchProducts() {
 async function fetchProducts() {
-	const res = await fetch(api)
-	const data = await res.json()
+	// const res = await fetch(api)
+	// const data = await res.json()
 	data.tables?.map(item => {
 		const div = document.createElement('div')
 		div.classList.add('intro__table')

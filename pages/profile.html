@@ -27,7 +27,7 @@
 			`
 			const exit = document.querySelector('.exit')
 			exit.addEventListener('click', e => {
-				localStorage.removeItem('user')
+				localStorage.clear()
 				window.location = '/pages/login.html'
 			})
 		</script>
